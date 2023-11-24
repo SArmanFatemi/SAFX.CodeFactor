@@ -15,4 +15,12 @@ public class SampleController (ILogger<SampleController> logger) : ControllerBas
 
         return Ok(guid);
     }
+
+    [HttpDelete]
+    public IActionResult Delete()
+    {
+        logger.LogInformation("SampleController.Delete() called");
+
+        return Ok();
+    }
 }
